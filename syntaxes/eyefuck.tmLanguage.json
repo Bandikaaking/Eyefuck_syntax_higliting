@@ -1,0 +1,61 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "EyeFuck",
+    "patterns": [
+        { "include": "#inc_dec" },
+        { "include": "#pointer" },
+        { "include": "#io" },
+        { "include": "#bin" },
+        { "include": "#load" },
+        { "include": "#loop" },
+        { "include": "#strings" },
+        { "include": "#comments" }
+    ],
+    "repository": {
+        "inc_dec": {
+            "patterns": [
+                { "name": "keyword.operator.incdec.eyefuck", "match": "\\^|v" }
+            ]
+        },
+        "pointer": {
+            "patterns": [
+                { "name": "keyword.operator.pointer.eyefuck", "match": ">|<" }
+            ]
+        },
+        "io": {
+            "patterns": [
+                { "name": "keyword.operator.io.eyefuck", "match": "\\.|," }
+            ]
+        },
+        "bin": {
+            "patterns": [
+                { "name": "storage.type.bin.eyefuck", "match": "\\bbin\\b" }
+            ]
+        },
+        "load": {
+            "patterns": [
+                { "name": "support.function.load.eyefuck", "match": "load\\[[^\\]]+\\]" }
+            ]
+        },
+        "loop": {
+            "patterns": [
+                { "name": "keyword.control.loop.eyefuck", "match": "loop\\[[^\\]]*\\]" }
+            ]
+        },
+        "strings": {
+            "name": "string.quoted.double.eyefuck",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                { "name": "constant.character.escape.eyefuck", "match": "\\\\." }
+            ]
+        },
+        "comments": {
+            "patterns": [
+                { "name": "comment.line.number-sign.eyefuck", "match": "#.*$" },
+                { "name": "comment.block.eyefuck", "match": "<==.*==>" }
+            ]
+        }
+    },
+    "scopeName": "source.eyf"
+}

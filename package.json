@@ -1,0 +1,29 @@
+{
+  "name": "eyefuck",
+  "displayName": "Eyefuck",
+  "description": "Syntax highliting for eyefuck",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.104.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Bandikaaking/Eyefuck_syntax_higliting"
+  },
+  "contributes": {
+    "languages": [{
+      "id": "eyefuck",
+      "aliases": ["EyeFuck", "eyefuck"],
+      "extensions": [".eyf"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "eyefuck",
+      "scopeName": "source.eyf",
+      "path": "./syntaxes/eyefuck.tmLanguage.json"
+    }]
+  }
+}

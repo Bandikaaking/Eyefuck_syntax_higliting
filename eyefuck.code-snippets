@@ -1,0 +1,65 @@
+{
+    "Increment": {
+        "prefix": "^",
+        "body": ["^"],
+        "description": "Increment current cell"
+    },
+    "Decrement": {
+        "prefix": "v",
+        "body": ["v"],
+        "description": "Decrement current cell"
+    },
+    "Move Right": {
+        "prefix": ">",
+        "body": [">"],
+        "description": "Move pointer to next cell"
+    },
+    "Move Left": {
+        "prefix": "<",
+        "body": ["<"],
+        "description": "Move pointer to previous cell"
+    },
+    "Print": {
+        "prefix": ".",
+        "body": ["."],
+        "description": "Output current cell"
+    },
+    "Input": {
+        "prefix": ",",
+        "body": [","],
+        "description": "Input to current cell"
+    },
+    "Bin Init": {
+        "prefix": "bin",
+        "body": ["bin ${1:0}"],
+        "description": "Initialize cell with binary value"
+    },
+    "Load File": {
+        "prefix": "load",
+        "body": ["load[${1:filename}]"],
+        "description": "Load file into memory"
+    },
+    "Loop": {
+        "prefix": "loop",
+        "body": [
+            "loop[",
+            "\t$0",
+            "]"
+        ],
+        "description": "Loop structure"
+    },
+    "Line Comment": {
+        "prefix": "#",
+        "body": ["# ${1:comment}"],
+        "description": "Single-line comment"
+    },
+    "Block Comment": {
+        "prefix": "blockcomment",
+        "body": [
+            "<==",
+            "\t$0",
+            "==>"
+        ],
+        "description": "Multi-line comment"
+    }
+}
